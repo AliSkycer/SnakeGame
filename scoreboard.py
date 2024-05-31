@@ -1,8 +1,6 @@
 from turtle import Turtle
 ALIGN = "center"
 FONT = ("arial", 15, 'bold')
-FILE = open("highscore.txt", "r")
-
 
 class ScoreBoard(Turtle):
 
@@ -11,13 +9,17 @@ class ScoreBoard(Turtle):
         self.ht()
         self.penup()
         self.color("white")
-        self.highscore = int(FILE.read())
-        FILE.close()
+        self.goto(0, 275)
+        self.read_file()
         self.score = 0
         self.write_score()
 
+    def read_file(self):
+        file = open("highscore.txt", "r")
+        self.highscore = int(file.read())
+        file.close()
+
     def write_score(self):
-        self.goto(0, 275)
         self.clear()
         self.write(f"Score : {self.score}  High Score : {self.highscore}", align=ALIGN, font=FONT)
 

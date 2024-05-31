@@ -9,6 +9,7 @@ def start_game():
     global game_start
     game_start = True
     massage.clear()
+    s_board.read_file()
 
 
 def try_again():
