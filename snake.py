@@ -36,6 +36,13 @@ class Snake:
             self.segments[seg].goto(x_pos, y_pos)
         self.head.forward(FORWARD_STEPS)
 
+    def remove_segments(self):
+        for seg in self.segments:
+            seg.ht()
+        self.segments.clear()
+        self.create_snake()
+        self.head = self.segments[0]
+
     def up(self):
         if self.head.heading() != DOWN:
             self.segments[0].setheading(UP)
