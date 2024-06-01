@@ -10,3 +10,5 @@ This snake game saves the highest score, so even if you close it, your score wil
 3 . Don't turn too fast or you might hit your tail.  
 4 . You can always exit the game by pressing the Esc(Escape) button.  
 Don't worry, your points will be saved.  
+
+so fork it and play.
